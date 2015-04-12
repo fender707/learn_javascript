@@ -1,0 +1,3 @@
+  function setSomePropertiesOn(object) {
+    
+  }
