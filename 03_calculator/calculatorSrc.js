@@ -25,6 +25,15 @@
        return number;
 
      },
-
-
+   
+     subtract: function(x) {
+       this.push(x);
+       this.minus();
+     },   
+     
+     minus: function() {
+       var last = this.pop();
+       var first = this.pop();
+       this.stack.push(first - last);
+     }
    };
