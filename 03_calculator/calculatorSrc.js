@@ -35,5 +35,17 @@
        var last = this.pop();
        var first = this.pop();
        this.stack.push(first - last);
+     },
+
+     times: function() {
+       this.stack.push(this.pop() * this.pop());
+     },
+
+     divide: function() {
+       var last = this.pop();
+       var first = this.pop();
+       this.stack.push(first / last);
      }
+
+
    };
