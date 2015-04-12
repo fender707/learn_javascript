@@ -22,6 +22,9 @@
 
      pop: function() {
        var number = this.stack.pop();
+       if(typeof(number) == 'undefined') {
+         throw "calculator is empty";
+       }
        return number;
 
      },
