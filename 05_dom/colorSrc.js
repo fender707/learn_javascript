@@ -12,6 +12,15 @@
      this.blue.toHex();
     },
 
+    gradient: function(othcolor,persent) {
+      if(persent < 0) persent = 0;
+      if(persent > 1) persent = 1;
+      return new Color(((othcolor.red - this.red) * persent + this.red), 
+             ((othcolor.green - this.green)*persent + this.green), 
+             ((othcolor.blue - this.blue) * persent + this.blue));
+
+    }
+
   }
 
   Number.prototype.toHex = function() {
@@ -20,3 +29,5 @@
       hex = "0" +hex;
     return hex;
   }
+
+  
