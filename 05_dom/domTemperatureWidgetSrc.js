@@ -13,10 +13,20 @@
       var celci = f2c(fahr);
       celcius.innerHTML = celci;
       
+      
     }
     convertButton.onclick = convert;
     this.fahrenheit = fahrenheit;
     this.celcius = celcius;
     this.convertButton = convertButton;
     this.convert = convert;
+
+  }
+
+
+  TemperatureWidget.prototype.colorFor = function(celcius) {
+    var freezing = new Color(208, 230, 254);
+    var boiling = new Color(255, 50 ,65);
+    var persent = celcius / 100;
+    return freezing.gradient(boiling, persent).toHex();
   }
