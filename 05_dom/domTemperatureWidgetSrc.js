@@ -1,4 +1,5 @@
   function TemperatureWidget() {
+    var self = this;
     this.widgetElement = document.getElementById('temperatureWidget');
     var fahrenheit = this.widgetElement.getElementsByTagName('input')[0];
     var celcius = this.widgetElement.getElementsByTagName('span')[0];
@@ -7,12 +8,12 @@
     function f2c(fahr) {
       return Math.round((fahr-32) * 5/9);
     }
-
+    
     function convert() {
       var fahr = fahrenheit.value;
       var celci = f2c(fahr);
       celcius.innerHTML = celci;
-      
+      self.widgetElement.style.backgroundColor = self.colorFor(celci);
       
     }
     convertButton.onclick = convert;
