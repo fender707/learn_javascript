@@ -5,7 +5,7 @@
     var convertButton = this.widgetElement.getElementsByTagName('input')[1];
      
     function f2c(fahr) {
-      return (fahr-32) * 5/9;
+      return Math.round((fahr-32) * 5/9);
     }
 
     function convert() {
@@ -14,7 +14,7 @@
       celcius.innerHTML = celci;
       
     }
-
+    convertButton.onclick = convert;
     this.fahrenheit = fahrenheit;
     this.celcius = celcius;
     this.convertButton = convertButton;
