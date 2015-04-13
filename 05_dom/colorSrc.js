@@ -15,9 +15,9 @@
     gradient: function(othcolor,persent) {
       if(persent < 0) persent = 0;
       if(persent > 1) persent = 1;
-      return new Color(((othcolor.red - this.red) * persent + this.red), 
-             ((othcolor.green - this.green)*persent + this.green), 
-             ((othcolor.blue - this.blue) * persent + this.blue));
+      return new Color((Math.floor((othcolor.red - this.red) * persent) + this.red), 
+             (Math.floor((othcolor.green - this.green)*persent) + this.green), 
+             (Math.floor((othcolor.blue - this.blue) * persent) + this.blue));
 
     }
 
